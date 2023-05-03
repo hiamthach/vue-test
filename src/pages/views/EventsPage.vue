@@ -1,4 +1,8 @@
+<script setup lang="ts">
+import MainLayout from "@/components/layout/MainLayout.vue";
+</script>
 <template>
-  <div>EventsPage</div>
+  <MainLayout>
+    <div>EventsPage</div>
+  </MainLayout>
 </template>
-<script></script>

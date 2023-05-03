@@ -1,4 +1,8 @@
+<script lang="ts" setup>
+import MainLayout from "@/components/layout/MainLayout.vue";
+</script>
 <template>
-  <div>MerchMusicPage</div>
+  <MainLayout>
+    <div>MerchMusicPage</div>
+  </MainLayout>
 </template>
-<script></script>
