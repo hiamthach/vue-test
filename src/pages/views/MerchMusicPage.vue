@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import MainLayout from "@/components/layout/MainLayout.vue";
+import ComingSoon from "../exceptions/ComingSoon.vue";
 </script>
 <template>
-  <MainLayout>
-    <div>MerchMusicPage</div>
-  </MainLayout>
+  <ComingSoon />
 </template>

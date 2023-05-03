@@ -1,12 +1,6 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
 import CusButton from "@/components/shared/CusButton.vue";
 import { IconArrowDown } from "@tabler/icons-vue";
-
-export default defineComponent({
-  name: "Header",
-  components: { CusButton, IconArrowDown },
-});
 </script>
 
 <template>

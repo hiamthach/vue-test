@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import MainLayout from "@/components/layout/MainLayout.vue";
+import ComingSoon from "../exceptions/ComingSoon.vue";
 </script>
 <template>
-  <MainLayout>
-    <div>EventsPage</div>
-  </MainLayout>
+  <ComingSoon />
 </template>

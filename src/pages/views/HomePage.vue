@@ -4,6 +4,8 @@ import MainLayout from "@/components/layout/MainLayout.vue";
 
 <template>
   <MainLayout>
-    <h1>HomePage</h1>
+    <div class="flex gap-12 my-12">
+
+    </div>
   </MainLayout>
 </template>
