@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import MainLayout from "@/components/layout/MainLayout.vue";
+import HomeContent from "@/components/feature/home/HomeContent.vue";
 </script>
 
 <template>
   <MainLayout>
-    <div class="flex gap-12 my-12">
-
-    </div>
+    <HomeContent />
   </MainLayout>
 </template>

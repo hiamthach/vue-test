@@ -8,6 +8,7 @@ export default {
         "text-primary": "#333333",
         primary: "#ff276b",
         black: "#333333",
+        grey: "#818181",
       },
       fontFamily: {
         heading: ["Bebas Neue", "sans-serif"],

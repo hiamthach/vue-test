@@ -1,6 +1,19 @@
 <script lang="ts" setup>
 import CusButton from "@/components/shared/CusButton.vue";
 import { IconArrowDown } from "@tabler/icons-vue";
+import { ref } from "vue";
+
+const scrollDownBtn = ref<HTMLElement | null>(null);
+
+const scrollToElement = () => {
+  if (scrollDownBtn.value) {
+    const top = scrollDownBtn.value.offsetTop;
+    window.scrollTo({
+      top: top + 64,
+      behavior: "smooth",
+    });
+  }
+};
 </script>
 
 <template>
@@ -35,8 +48,10 @@ import { IconArrowDown } from "@tabler/icons-vue";
 
       <div
         class="mx-auto mt-auto h-fit w-fit cursor-pointer rounded-full bg-black p-1 text-white hover:bg-primary"
+        ref="scrollDownBtn"
+        @click="scrollToElement"
       >
-        <IconArrowDown class="h-8 w-8" stroke-width="3" />
+        <IconArrowDown class="h-8 w-8" />
       </div>
     </div>
 
