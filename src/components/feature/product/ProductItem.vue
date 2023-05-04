@@ -18,9 +18,11 @@ defineProps<Props>();
       class="aspect-square h-auto w-full object-contain object-center"
     />
 
-    <h6 class="my-2 mt-6 cursor-pointer font-heading text-[30px] leading-[1]">
-      {{ data.title }}
-    </h6>
+    <router-link :to="`/merch-music/${data.id}`">
+      <h6 class="my-2 mt-6 cursor-pointer font-heading text-[30px] leading-[1]">
+        {{ data.title }}
+      </h6>
+    </router-link>
     <p class="text-base text-grey">${{ data.price }}USD</p>
   </div>
 </template>
