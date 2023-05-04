@@ -49,6 +49,18 @@ const eventData: ListEvent = [
     imageUrl:
       "https://assets.website-files.com/602ee56fd05bf228e0f78bb3/602fcf6c3e54e0227317ec03_pexels-cottonbro-5648342.jpg",
   },
+  {
+    id: "the-asylum",
+    title: "The Asylum",
+    location: "The Asylum, Rotterdam",
+    date: new Date("2022/12/16 19:45"),
+    subtitle:
+      "Watch The Band play through their whole album supported by Saxon and the Jumpers.",
+    description:
+      "Incidunt temporibus hic. Quo vel ea fugit assumenda. Reiciendis consequatur amet voluptatem aut molestias voluptatem.\n\nLibero rerum corrupti. Qui repellendus ratione dolore a fuga ut a quia. Autem ducimus ducimus aspernatur. Labore est qui ut cumque voluptatem alias repellat dolor. Impedit earum sit tenetur fugiat ut corrupti eveniet reprehenderit quo. Aut sint et repellat sit. \n\n Quae fugit ipsam atque soluta eaque. Et ea dolorum. Minus quae enim. Molestiae similique atque provident. Voluptas aspernatur omnis est.",
+    imageUrl:
+      "https://assets.website-files.com/602ee56fd05bf228e0f78bb3/602fcf6c3e54e0227317ec03_pexels-cottonbro-5648342.jpg",
+  },
 ];
 
 export default eventData;

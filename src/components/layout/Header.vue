@@ -39,7 +39,7 @@ const scrollToElement = () => {
       <div class="h-[10px] w-full bg-black"></div>
 
       <button
-        class="my-[10px] bg-black px-5 py-4 font-heading text-4xl leading-[1] text-white hover:bg-primary"
+        class="my-[10px] bg-black px-5 py-4 font-heading text-4xl leading-[1] text-white"
       >
         The ELECTRIFYING new album is out now
       </button>

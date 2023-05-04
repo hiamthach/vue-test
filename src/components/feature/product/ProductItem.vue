@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Product } from "@/config/types/product";
+import ProductAddBtn from "./ProductAddBtn.vue";
 interface Props {
   data: Product;
 }
@@ -8,9 +9,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div
-    class="mb-10 h-full w-full px-10 text-center text-black hover:text-primary"
-  >
+  <div class="mb-10 h-full w-full px-10 text-center text-black">
     <img
       :src="data.imageUrl"
       :alt="data.title"
@@ -24,5 +23,6 @@ defineProps<Props>();
       </h6>
     </router-link>
     <p class="text-base text-grey">${{ data.price }}USD</p>
+    <ProductAddBtn :id="data.id" :size="'small'" />
   </div>
 </template>

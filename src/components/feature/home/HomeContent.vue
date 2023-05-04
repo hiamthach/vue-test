@@ -19,7 +19,8 @@ import productData from "@/data/product";
         </router-link>
       </div>
       <div class="mt-10 flex flex-col gap-10">
-        <EventItem v-for="item of eventData" :data="item"> </EventItem>
+        <EventItem v-for="item of eventData.slice(0, 4)" :data="item">
+        </EventItem>
       </div>
     </div>
 
@@ -29,13 +30,13 @@ import productData from "@/data/product";
           Merch & Music
         </h5>
 
-        <router-link to="/events">
+        <router-link to="/merch-music">
           <CusButton text="see all merch +" />
         </router-link>
       </div>
 
       <div class="mt-10 flex w-full flex-wrap">
-        <div class="w-1/2" v-for="product of productData">
+        <div class="w-1/2" v-for="product of productData.slice(0, 4)">
           <ProductItem :data="product" />
         </div>
       </div>

@@ -14,6 +14,9 @@ export const useCartStore = defineStore("cart", {
     cartCount: (state): number => {
       return state.items.length;
     },
+    cartItems: (state): CartList => {
+      return state.items;
+    },
   },
 
   actions: {

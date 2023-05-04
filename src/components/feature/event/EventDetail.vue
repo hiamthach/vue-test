@@ -7,14 +7,35 @@ import moment from "moment";
 import { DATE_FORMAT } from "@/config/constants/date";
 import { IconArrowLeft, IconCircleArrowUpRightFilled } from "@tabler/icons-vue";
 
+import { useCartStore } from "@/stores/CartStore";
+
 defineProps<{
   data: Event;
 }>();
 
 const router = useRouter();
 
+const store = useCartStore();
+
 const navigateBack = () => {
   router.back();
+};
+
+const addToCart = (id: string) => {
+  const findProduct = store.items.find((item) => item.id === id);
+
+  if (findProduct) {
+    store.updateCartItem(id, {
+      id,
+      amount: findProduct.amount++,
+    });
+    return;
+  } else {
+    store.addToCart({
+      id,
+      amount: 1,
+    });
+  }
 };
 </script>
 
@@ -45,7 +66,7 @@ const navigateBack = () => {
       <div class="h-[10px] w-full bg-black"></div>
 
       <button
-        class="my-[10px] bg-black px-5 py-4 text-center font-body text-[17px] font-normal leading-[1] text-white hover:bg-primary"
+        class="my-[10px] bg-black px-5 py-4 text-center font-body text-[17px] font-normal leading-[1] text-white"
       >
         {{ data.subtitle }}
       </button>
@@ -89,6 +110,7 @@ const navigateBack = () => {
 
       <button
         class="mt-6 flex items-center gap-2 bg-primary px-5 pb-[10px] pt-3 font-heading text-2xl leading-[1] text-white hover:bg-black"
+        @click="addToCart(data.id)"
       >
         <span>Buy Tickets</span> <IconCircleArrowUpRightFilled />
       </button>
