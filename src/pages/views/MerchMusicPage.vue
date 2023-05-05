@@ -2,6 +2,8 @@
 import MainLayout from "@/components/layout/MainLayout.vue";
 import ProductItem from "@/components/feature/product/ProductItem.vue";
 import productData from "@/data/product";
+
+window.document.title = "Merch & Music | The Band";
 </script>
 <template>
   <MainLayout>

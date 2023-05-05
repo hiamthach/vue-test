@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import ExceptionLayout from "@/components/layout/ExceptionLayout.vue";
+
+window.document.title = "Coming Soon | The Band";
 </script>
 
 <template>

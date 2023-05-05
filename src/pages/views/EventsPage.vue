@@ -2,6 +2,8 @@
 import MainLayout from "@/components/layout/MainLayout.vue";
 import EventItem from "@/components/feature/event/EventItem.vue";
 import eventData from "@/data/event";
+
+window.document.title = "Events | The Band";
 </script>
 <template>
   <MainLayout>

@@ -10,6 +10,8 @@ const route = useRoute();
 const merchId = route.params.id;
 
 const data = productData.find((product) => product.id === merchId);
+
+window.document.title = `${data ? `${data.title} | ` : ""}The Band`;
 </script>
 <template>
   <Container>

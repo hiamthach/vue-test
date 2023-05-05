@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import CusButton from "@/components/shared/CusButton.vue";
 import ExceptionLayout from "@/components/layout/ExceptionLayout.vue";
+
+window.document.title = "Page Not Found | The Band";
 </script>
 
 <template>

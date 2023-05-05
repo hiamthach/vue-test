@@ -10,6 +10,8 @@ const route = useRoute();
 const eventId = route.params.id;
 
 const data = eventData.find((event) => event.id === eventId);
+
+window.document.title = `${data ? `${data.title} | ` : ""}The Band`;
 </script>
 <template>
   <Container>
