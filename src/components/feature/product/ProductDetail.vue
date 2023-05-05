@@ -47,7 +47,7 @@ const navigateBack = () => {
         ${{ data.price }} USD
       </span>
 
-      <ProductAddBtn :id="data.id" />
+      <ProductAddBtn :id="data.id" size="medium" />
 
       <div
         class="mr-auto mt-5 h-fit w-fit cursor-pointer rounded-full bg-black p-1 text-white hover:bg-primary"
