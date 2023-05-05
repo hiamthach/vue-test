@@ -8,8 +8,13 @@ import productData from "@/data/product";
     <div class="my-12">
       <h3 class="mb-10 font-heading text-[50px] text-black">MERCH & MUSIC</h3>
 
-      <div class="grid grid-cols-3 gap-10">
-        <div v-for="item of productData" :data="item" class="h-fit">
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          v-for="item of productData"
+          :data="item"
+          :key="item.id"
+          class="h-fit"
+        >
           <ProductItem :data="item" />
         </div>
       </div>

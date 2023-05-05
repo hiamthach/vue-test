@@ -17,8 +17,8 @@ const scrollToElement = () => {
 </script>
 
 <template>
-  <div class="mb-5 flex h-[500px] gap-12">
-    <div class="flex h-full w-1/3 flex-col">
+  <div class="mb-5 flex flex-col gap-12 md:flex-row">
+    <div class="flex h-full w-full flex-col md:w-1/3">
       <nav class="relative z-10 flex w-full items-center gap-2">
         <router-link to="/"><CusButton text="Home" /></router-link>
         <router-link to="/events"> <CusButton text="Events" /> </router-link>
@@ -27,13 +27,9 @@ const scrollToElement = () => {
         </router-link>
         <div class="block h-[24px] w-full flex-1 bg-black"></div>
       </nav>
-      <h1 class="font-heading text-[115px] font-bold leading-[1] text-black">
-        THE BAND
-      </h1>
+      <h1 class="header-title">THE BAND</h1>
       <div class="h-[10px] w-full bg-black"></div>
-      <h4
-        class="mx-auto my-[10px] text-center font-heading text-3xl text-black"
-      >
+      <h4 class="hero-text">
         FEAST YOUR EYES <strong>·</strong> FILL YOUR BOOTS
       </h4>
       <div class="h-[10px] w-full bg-black"></div>
@@ -47,7 +43,7 @@ const scrollToElement = () => {
       <img src="@/assets/stripe.svg" alt="stripe" class="h-auto w-full" />
 
       <div
-        class="mx-auto mt-auto h-fit w-fit cursor-pointer rounded-full bg-black p-1 text-white hover:bg-primary"
+        class="mx-auto mt-6 h-fit w-fit cursor-pointer rounded-full bg-black p-1 text-white hover:bg-primary"
         ref="scrollDownBtn"
         @click="scrollToElement"
       >
@@ -62,7 +58,7 @@ const scrollToElement = () => {
         loop
         muted
         playsinline
-        class="h-full w-full object-cover object-center"
+        class="h-full min-h-[500px] w-full object-cover object-center"
       ></video>
     </div>
   </div>

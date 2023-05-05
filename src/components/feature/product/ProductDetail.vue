@@ -18,8 +18,8 @@ const navigateBack = () => {
 </script>
 
 <template>
-  <div class="mb-5 flex gap-12">
-    <div class="flex h-full w-1/3 flex-col">
+  <div class="mb-5 flex flex-col gap-12 md:flex-row">
+    <div class="flex h-full w-full flex-col md:w-1/3">
       <nav class="relative z-10 flex w-full items-center gap-2">
         <router-link to="/"><CusButton text="Home" /></router-link>
         <router-link to="/events"> <CusButton text="Events" /> </router-link>
@@ -28,9 +28,7 @@ const navigateBack = () => {
         </router-link>
         <div class="block h-[24px] w-full flex-1 bg-black"></div>
       </nav>
-      <h1
-        class="text-center font-heading text-[115px] font-bold leading-[1] text-black"
-      >
+      <h1 class="header-title">
         {{ data.title }}
       </h1>
       <div class="h-[10px] w-full bg-black"></div>

@@ -1,12 +1,16 @@
-import type { Product } from "./product";
-import type { Event } from "./event";
-
 export type CartItem = {
   id: string;
   amount: number;
 };
 
-export type CartItemProduct = CartItem & Product;
-export type CartItemEvent = CartItem & Event;
+export type CartItemView = {
+  id: string;
+  amount: number;
+  title?: string;
+  price?: number;
+  imageUrl?: string;
+}
 
 export type CartList = Array<CartItem>;
+
+export type CartListView = Array<CartItemView>;

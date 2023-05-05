@@ -12,30 +12,17 @@ defineProps<{
 const store = useCartStore();
 
 const addToCart = (id: string) => {
-  const findProduct = store.items.find((item) => item.id === id);
-
-  if (findProduct) {
-    store.updateCartItem(id, {
-      id,
-      amount: findProduct.amount + amount.value,
-    });
-    return;
-  } else {
-    store.addToCart({
-      id,
-      amount: amount.value,
-    });
-  }
+  console.log(store.cartItems);
+  store.addToCart({
+    id,
+    amount: amount.value,
+  });
 };
 </script>
 
 <template>
-  <div class="mt-3 flex gap-2">
-    <input
-      type="number"
-      class="w-fit max-w-[64px] border border-solid border-black p-2"
-      v-model="amount"
-    />
+  <div class="mt-1 flex flex-wrap gap-2 md:mt-3">
+    <input type="number" class="input-number" v-model="amount" />
 
     <button
       class="flex flex-1 items-center justify-center gap-2 bg-primary px-5 pb-[10px] pt-3 font-heading text-2xl leading-[1] text-white hover:bg-black"

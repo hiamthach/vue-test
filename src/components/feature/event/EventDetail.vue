@@ -22,26 +22,16 @@ const navigateBack = () => {
 };
 
 const addToCart = (id: string) => {
-  const findProduct = store.items.find((item) => item.id === id);
-
-  if (findProduct) {
-    store.updateCartItem(id, {
-      id,
-      amount: findProduct.amount++,
-    });
-    return;
-  } else {
-    store.addToCart({
-      id,
-      amount: 1,
-    });
-  }
+  store.addToCart({
+    id,
+    amount: 1,
+  });
 };
 </script>
 
 <template>
-  <div class="mb-5 flex gap-12">
-    <div class="flex h-full w-1/3 flex-col">
+  <div class="mb-5 flex flex-col gap-12 md:flex-row">
+    <div class="flex h-full w-full flex-col md:w-1/3">
       <nav class="relative z-10 flex w-full items-center gap-2">
         <router-link to="/"><CusButton text="Home" /></router-link>
         <router-link to="/events"> <CusButton text="Events" /> </router-link>
@@ -50,14 +40,12 @@ const addToCart = (id: string) => {
         </router-link>
         <div class="block h-[24px] w-full flex-1 bg-black"></div>
       </nav>
-      <h1
-        class="text-center font-heading text-[115px] font-bold leading-[1] text-black"
-      >
+      <h1 class="header-title">
         {{ data.title }}
       </h1>
       <div class="h-[10px] w-full bg-black"></div>
       <div
-        class="my-3 flex items-end justify-center gap-1 font-heading text-[30px] leading-[1] text-black"
+        class="max-[450px]:text-[7vw] mx-auto my-3 flex items-end justify-center gap-1 text-center font-heading text-3xl text-black max-xl:text-[2.9vw] max-lg:text-[3vw] max-md:text-[8vw]"
       >
         <span>{{ moment(data.date, DATE_FORMAT).format("dddd") }}</span>
         <DayNumber>{{ moment(data.date, DATE_FORMAT).format("DD") }}</DayNumber>

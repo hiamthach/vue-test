@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .input-number {
+    @apply max-w-[56px] border border-solid border-black px-2 py-1;
+  }
+
+  .header-title {
+    @apply max-[450px]:text-[27vw] text-center font-heading text-[115px] font-bold leading-[1] text-black max-xl:text-[8vw] max-lg:text-[10vw] max-md:text-[30vw];
+  }
+
+  .hero-text {
+    @apply max-[450px]:text-[7vw] mx-auto my-[10px] text-center font-heading text-3xl text-black max-xl:text-[2.9vw] max-lg:text-[3vw] max-md:text-[8vw];
+  }
+}
