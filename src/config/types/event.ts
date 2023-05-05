@@ -6,6 +6,7 @@ export type Event = {
   description: string;
   location: string;
   imageUrl: string;
+  price: number;
 };
 
 export type ListEvent = Array<Event>;

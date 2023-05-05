@@ -4,7 +4,7 @@ import CusButton from "@/components/shared/CusButton.vue";
 
 <template>
   <div
-    class="flex h-screen w-full flex-col items-center justify-center gap-3 bg-not-found"
+    class="flex h-screen w-full flex-col items-center justify-center gap-3 bg-not-found bg-cover bg-center"
   >
     <slot />
 
